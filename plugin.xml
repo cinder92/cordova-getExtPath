@@ -1,35 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="dante.plugin.getSdCard"
-        version="0.0.1">
-
-  <name>getSdCard</name>
-  <description>This plugin get sdCard path and normal path </description>
-  <license>Apache 2.0</license>
-  <keywords>cordova,sdcard,internal</keywords>
-
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
-
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="getSdCard">
-        <param name="android-package" value="dante.plugin.getSdCard"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/getSdCard.java" target-dir="src/dante/plugin/getSdCard"/>
-
-	 <js-module src="www/getSdCard.js" name="getSdCard">
-    	<clobbers target="window.getSdCard" />
-  	</js-module>
-	
-	 <info>
-       This plugin get sdCard path and normal path 
-    </info>
-
-  </platform>
-
-</plugin>
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-am-i-late" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>AmILate</name><js-module name="AmILate" src="www/AmILate.js"><clobbers target="cordova.plugins.AmILate" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="AmILate"><param name="android-package" value="cordova-plugin-am-i-late.AmILate" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file><config-file parent="/*" target="AndroidManifest.xml">
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+</config-file><source-file src="src/android/AmILate.java" target-dir="src/cordova-plugin-am-i-late/AmILate" /></platform></plugin>
